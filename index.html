@@ -6,20 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">    <title>My Portfolio</title>
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <header>
         <div class="logo">
             <img src="./wds.png" alt="Logo">
         </div>
-        <nav class="navigation">
-            <ul>
-               <li><a href="#"></a>Home</li>
-               <li><a href="#"></a>About Me</li>
-               <li><a href="#"></a>Projects</li>
-               <li><a href="#"></a>Work</li>
-               <li><a href="#"></a>Concept</li>
-            </ul>
+        <nav class="navbar">
+               <a class="nav__item" href="#">Projects</a>
+               
+               <a href="#" class="nav__item">Work</a>
+              
+                <div class="dropdown" data-dropdown>
+                    <a class="nav__item"  href="#" data-dropdown-link>Technologies</a>
+                    <div class="dropdown-menu information-grid">
+                        <div class="dropdown-heading">Frontend</div>
+                        <div class="dropdown-links">
+                            <a href="#" class="link">CSS</a>
+                            <a href="#" class="link">Reactjs</a>
+                            <a href="#" class="link">Bootstrap</a>
+                        </div>
+                        <div class="dropdown-heading">Backend</div>
+                        <div class="dropdown-links">
+                            <a href="#" class="link">nodejs</a>
+                            <a href="#" class="link">mongodb</a>
+                            <a href="#" class="link">expressjs</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown" data-dropdown>
+                    <a class="nav__item"  href="#" data-dropdown-link>Resources</a>
+                    <div class="dropdown-menu">
+                        <p>Resources goes here..</p>
+                    </div>
+                </div>
+                
+              <a href="#" class="nav__item">Security</a>               
         </nav>
     </header>
     

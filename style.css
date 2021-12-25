@@ -13,13 +13,55 @@ header{
     background-color: gray;
 }
 
-nav ul{
+.navbar{
     display: flex;
-    list-style-type: none;
 }
 
-nav ul li{
+.nav__item{
     margin: 10px;
+    display: inline-block;
     font-size: bold 700;
-    color: darkgray;
+    color: white;
+    text-decoration: none;
+}
+
+.nav__item:hover, 
+.dropdown.active>.nav__item{
+    color: black;
+}
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown-menu{
+    position: absolute;
+    left: 0;
+    top: calc(100% + .25rem);
+    background-color: white;
+    padding: .75rem;
+    border-radius: .25rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.information-grid{
+    display: grid;
+    grid-template-columns: repeat(2,max-content);
+    gap: 2rem;
+}
+
+.dropdown-links{
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.dropdown.active>a + .dropdown-menu{
+    opacity: 1;
+    transform: translateY(0px);
+    pointer-events: auto;
 }
